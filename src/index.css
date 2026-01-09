@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Chat bubble styles */
+.user-msg {
+  background: #e6f0ff;
+  color: #111;
+  align-self: flex-end;
+  border-radius: 16px 16px 4px 16px;
+  padding: 12px 16px;
+  max-width: fit-content;
+  line-height: 1.5;
+}
+
+.assistant-msg {
+  background-color: #FFFFFF;
+  color: #111;
+  align-self: flex-start;
+  border-radius: 16px 16px 16px 4px;
+  padding: 12px 16px;
+  max-width: fit-content;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  line-height: 1.5;
+}
+
+/* Message typography */
+.msg-text {
+  font-size: 16px;
+}
+
+.msg-meta {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Avatars */
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.user-avatar {
+  background: #d6e4ff;
+  color: #1e3a8a;
+  border: 1px solid #bcd0ff;
+}
+
+.assistant-avatar {
+  background: rgb(59 130 246);
+  color: #eaeef3;
+  border: 1px solid #d5dae1;
+}
+
+/* Typing indicator */
+.typing-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+.typing-dots span {
+  width: 6px;
+  height: 6px;
+  background: #64748b;
+  border-radius: 50%;
+  display: inline-block;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.6; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* Fade-in animation for messages */
+.fade-in { animation: fadeIn 250ms ease-out; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Google Sign-In SDK button overrides to match app social button sizing
+   Targets the SDK-rendered elements inside #google-signin-button so
+   it becomes a full-width block and doesn't overlap adjacent buttons.
+*/
+#google-signin-button,
+#google-signin-button > div,
+#google-signin-button > div > div,
+#google-signin-button button,
+#google-signin-button .g_id_signin {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#google-signin-button > div,
+#google-signin-button button {
+  height: 45px !important;
+  min-height: 45px !important;
+}
+
+#google-signin-button .g_id_signin::before {
+  display: none !important; /* hide any SDK pseudo-icons if they cause layout issues */
+}
+
+#google-signin-button { z-index: 1; }

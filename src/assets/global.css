@@ -1,0 +1,47 @@
+.select__control,
+.css-p3h9b2-control,
+.css-1rvqszs-control,
+.css-13cymwt-control,
+.css-dwjrd9-control,
+.css-xk31ai-control,
+.react-select__control {
+  border-radius:8px !important;
+  height: 41px !important;
+  border: 1px solid #bebebe !important;
+  overflow: hidden;
+  font-size: 14px !important;
+}
+
+.select__control:focus-within,
+.react-select__control--is-focused,
+.css-13cymwt-control--is-focused {
+  border-color: #60A5FA !important; /* blue-600 */
+}
+
+.css-4xgw5l-IndicatorsContainer2 {
+  /* background-color: #3B82F6 !important; */
+  border-radius: 10px !important;
+  width: 35px !important;
+  height: 35px !important;
+  margin-right: 4px !important;
+  margin-top: 2px !important;
+}
+
+.css-tj5bde-Svg {
+  margin-right: 0px !important;
+}
+
+.select__dropdown-indicator {
+  color: #60A5FA !important;
+}
+
+/* React Select font size overrides */
+.react-select__control,
+.select__control {
+  font-size: 14px !important;
+}
+.react-select__option,
+.select__option {
+  font-size: 14px !important;
+}
+
