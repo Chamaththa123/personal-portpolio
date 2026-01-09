@@ -59,10 +59,10 @@ export const Hero = () => {
     <div
       className="relative"
       style={{
-        minHeight: "100vh",
+        height: "900px",
         width: "100vw",
         background:
-          "linear-gradient(120deg, #7b2ff2 20%, #298cf0ff 40%, #7b2ff2 100%)",
+          "linear-gradient(120deg, #298cf0ff 20%, #7b2ff2 40%, #298cf0ff 100%)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -72,7 +72,7 @@ export const Hero = () => {
         boxSizing: "border-box",
       }}
     >
-      <h1 className="text-white font-bold text-[75px] mt-10">
+      <h1 className="text-white font-bold text-[75px] mt-[230px]">
         Chamaththa Shamod
       </h1>
       <h3 className="text-white font-medium text-[20px]">
@@ -84,7 +84,7 @@ export const Hero = () => {
         design. Passionate about building products that make a difference.
       </p>
 
-      <button className="bg-[#ffd34e] text-gray-600 px-7 py-3 rounded-md font-semibold text-[18px] shadow-md hover:bg-[#ffe082] transition cursor-pointer">
+      <button className="bg-[#ffd34e] text-gray-600 px-7 py-3 rounded-md font-medium text-[18px] shadow-md hover:bg-[#ffe082] transition cursor-pointer">
         {" "}
         Let's Talk
       </button>
