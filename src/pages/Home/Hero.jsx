@@ -1,7 +1,21 @@
 import React from "react";
 import devImg from '../../assets/hero/mobile.png';
+import { useEffect, useState } from "react";
 
 export const Hero = () => {
+  // Automated hover state for cards
+  const [hoveredCard, setHoveredCard] = useState(-1);
+
+  useEffect(() => {
+    let current = 0;
+    setHoveredCard(0);
+    const interval = setInterval(() => {
+      current = (current + 1) % 4;
+      setHoveredCard(current);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     // <section className="flex flex-col md:flex-row items-center justify-center min-h-[80vh] px-4 md:px-0 max-w-6xl mx-auto gap-12 md:gap-0">
     //   {/* Left: Text Content */}
@@ -77,7 +91,7 @@ export const Hero = () => {
 
       <div className="absolute bottom-0 flex gap-6 items-end">
         <div className="flex flex-col items-end">
-          <div className="bg-white h-[250px] w-[300px] rounded-t-4xl p-2 border border-transparent transition-all duration-300 hover:scale-105 hover:h-[270px] hover:w-[320px] hover:border-4 hover:border-black cursor-pointer">
+          <div className={`bg-white h-[250px] w-[300px] rounded-t-4xl p-2 border border-transparent transition-all duration-300 cursor-pointer ${hoveredCard === 0 ? 'scale-105 h-[270px] w-[320px] border-4 border-black' : ''}`}> 
           <h1 className="text-center mt-2 text-[18px]">1M+ free templates</h1>
           <p className="text-center text-[14px]">
             Schedule to socials. Watch the likes roll in.
@@ -90,7 +104,7 @@ export const Hero = () => {
         </div>
         </div>
         <div className="flex flex-col items-end">
-          <div className="bg-white h-[250px] w-[300px] rounded-t-4xl p-2 border border-transparent transition-all duration-300 hover:scale-105 hover:h-[270px] hover:w-[320px] hover:border-4 cursor-pointer">
+          <div className={`bg-white h-[250px] w-[300px] rounded-t-4xl p-2 border border-transparent transition-all duration-300 cursor-pointer ${hoveredCard === 1 ? 'scale-105 h-[270px] w-[320px] border-4 border-black' : ''}`}> 
           <h1 className="text-center mt-2 text-[18px]">
             Social media marketing
           </h1>
@@ -105,7 +119,7 @@ export const Hero = () => {
         </div>
         </div>
         <div className="flex flex-col items-end">
-          <div className="bg-white h-[250px] w-[300px] rounded-t-4xl p-2 border border-transparent transition-all duration-300 hover:scale-105 hover:h-[270px] hover:w-[320px] hover:border-4 cursor-pointer">
+          <div className={`bg-white h-[250px] w-[300px] rounded-t-4xl p-2 border border-transparent transition-all duration-300 cursor-pointer ${hoveredCard === 2 ? 'scale-105 h-[270px] w-[320px] border-4 border-black' : ''}`}> 
           <h1 className="text-center mt-2 text-[18px]">
             Social media marketing
           </h1>
@@ -120,7 +134,7 @@ export const Hero = () => {
         </div>
         </div>
         <div className="flex flex-col items-end">
-          <div className="bg-white h-[250px] w-[300px] rounded-t-4xl p-2 border border-transparent transition-all duration-300 hover:scale-105 hover:h-[270px] hover:w-[320px] hover:border-4 cursor-pointer">
+          <div className={`bg-white h-[250px] w-[300px] rounded-t-4xl p-2 border border-transparent transition-all duration-300 cursor-pointer ${hoveredCard === 3 ? 'scale-105 h-[270px] w-[320px] border-4 border-black' : ''}`}> 
           <h1 className="text-center mt-2 text-[18px]">
             Social media marketing
           </h1>
