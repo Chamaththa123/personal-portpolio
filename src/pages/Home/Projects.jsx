@@ -35,9 +35,10 @@ const projects = [
 export const Projects = () => {
   return (
     <section className="w-full min-h-screen flex flex-col items-center bg-[#f7f7f8] py-8">
-      <span className="text-[#7c3aed] font-medium text-sm mt-8">My Recent Work</span>
-      <h2 className="text-5xl font-extrabold text-gray-900 mb-12">Featured Projects</h2>
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <span className="text-[#7c3aed] font-medium text-[15px] mt-8">My Recent Work</span>
+      <h2  className="text-[50px] text-gray-800 mb-4 "
+        style={{ fontWeight: "800" }}>Featured Projects</h2>
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
         {/* Top row */}
         <div className="flex flex-col gap-8">
           {/* E-Commerce Platform */}

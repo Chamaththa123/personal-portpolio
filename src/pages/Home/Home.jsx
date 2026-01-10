@@ -10,13 +10,14 @@ import { Test } from './Test'
 
 export const Home = () => {
   return (
-    <div><Header />
+    <div style={{ fontFamily: "Space Grotesk, Inter, Arial, sans-serif" }}><Header />
     <Hero />
     <About />
     <Education />
     <Experience />
     <Projects />
     <Contact />
-    <Test /></div>
+    {/* <Test /> */}
+    </div>
   )
 }
