@@ -3,8 +3,9 @@ import React from 'react';
 export const Education = () => {
   return (
     <section className="w-full min-h-screen flex flex-col items-center bg-[#f9fafb] py-8">
-      <span className="text-[#7c3aed] font-medium text-sm mt-8">My Academic Journey</span>
-      <h2 className="text-5xl font-extrabold text-gray-900 mb-12">Education</h2>
+     <span className="text-[#7c3aed] font-medium text-[15px] mt-8">My Academic Journey</span>
+      <h2  className="text-[50px] text-gray-800 mb-4 "
+        style={{ fontWeight: "800" }}>Education</h2>
       <div className="w-full max-w-6xl flex flex-col md:flex-row gap-10">
         {/* Academic Background Timeline */}
         <div className="flex-1">
@@ -12,28 +13,50 @@ export const Education = () => {
             <span className="text-[#7c3aed] mr-2 text-2xl">🎓</span> Academic Background
           </h3>
           <div className="relative pl-8">
-            {/* Timeline line */}
-            <div className="absolute left-3 top-0 h-full w-0.5 bg-[#e9d5ff]" />
-            {/* Master */}
-            <div className="relative mb-8">
-              <div className="absolute -left-5 top-2 w-7 h-7 rounded-full bg-[#ede9fe] flex items-center justify-center text-[#7c3aed] text-lg">👁️</div>
-              <div className="bg-white rounded-2xl shadow p-6 ml-6">
-                <span className="text-[#7c3aed] text-sm font-semibold">2018 - 2020</span>
-                <h4 className="text-xl font-bold mt-1">Master of Science in Computer Science</h4>
-                <span className="text-gray-700 font-medium">Stanford University</span>
-                <p className="text-gray-500 text-sm mt-1">Specialized in Artificial Intelligence and Machine Learning. Graduated with honors.</p>
-                <span className="inline-block mt-3 bg-[#ede9fe] text-[#7c3aed] text-xs font-bold px-4 py-1 rounded-full">GPA: 3.9/4.0</span>
+            {/* Timeline vertical line */}
+            <div className="absolute left-4 top-0 h-full w-0.5 bg-[#a78bfa] z-0" />
+            {/* Master Card */}
+            <div className="relative mb-10">
+              {/* Timeline Icon */}
+              <div className="absolute left-0 top-8 w-8 h-8 flex items-center justify-center z-10">
+                <span className="bg-white border-2 border-[#a78bfa] w-7 h-7 rounded-full flex items-center justify-center">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12" fill="#a78bfa" opacity="0.15"/>
+                    <path d="M8 8h8v8H8z" fill="#a78bfa" opacity="0.3"/>
+                    <path d="M12 7v5l3 2" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <div className="ml-12">
+                <div className="bg-white rounded-2xl shadow p-8 flex flex-col gap-2">
+                  <span className="text-[#7c3aed] text-base font-semibold">2018 - 2020</span>
+                  <h4 className="text-2xl font-bold mt-1 mb-1">Master of Science in Computer Science</h4>
+                  <span className="text-gray-800 font-semibold text-lg">Stanford University</span>
+                  <p className="text-gray-500 text-base mt-1">Specialized in Artificial Intelligence and Machine Learning. Graduated with honors.</p>
+                  <span className="inline-block mt-3 bg-[#ede9fe] text-[#7c3aed] text-base font-bold px-4 py-1 rounded-full shadow">GPA: 3.9/4.0</span>
+                </div>
               </div>
             </div>
-            {/* Bachelor */}
-            <div className="relative">
-              <div className="absolute -left-5 top-2 w-7 h-7 rounded-full bg-[#ede9fe] flex items-center justify-center text-[#7c3aed] text-lg">💬</div>
-              <div className="bg-white rounded-2xl shadow p-6 ml-6">
-                <span className="text-[#7c3aed] text-sm font-semibold">2014 - 2018</span>
-                <h4 className="text-xl font-bold mt-1">Bachelor of Science in Software Engineering</h4>
-                <span className="text-gray-700 font-medium">MIT</span>
-                <p className="text-gray-500 text-sm mt-1">Focus on full-stack development and software architecture. Dean's List all semesters.</p>
-                <span className="inline-block mt-3 bg-[#ede9fe] text-[#7c3aed] text-xs font-bold px-4 py-1 rounded-full">GPA: 3.8/4.0</span>
+            {/* Bachelor Card */}
+            <div className="relative mb-4">
+              {/* Timeline Icon */}
+              <div className="absolute left-0 top-8 w-8 h-8 flex items-center justify-center z-10">
+                <span className="bg-white border-2 border-[#a78bfa] w-7 h-7 rounded-full flex items-center justify-center">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12" fill="#a78bfa" opacity="0.15"/>
+                    <rect x="7" y="7" width="10" height="10" rx="3" fill="#a78bfa" opacity="0.3"/>
+                    <path d="M12 7v5l3 2" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <div className="ml-12">
+                <div className="bg-white rounded-2xl shadow p-8 flex flex-col gap-2">
+                  <span className="text-[#7c3aed] text-base font-semibold">2014 - 2018</span>
+                  <h4 className="text-2xl font-bold mt-1 mb-1">Bachelor of Science in Software Engineering</h4>
+                  <span className="text-gray-800 font-semibold text-lg">MIT</span>
+                  <p className="text-gray-500 text-base mt-1">Focus on full-stack development and software architecture. Dean's List all semesters.</p>
+                  <span className="inline-block mt-3 bg-[#ede9fe] text-[#7c3aed] text-base font-bold px-4 py-1 rounded-full shadow">GPA: 3.8/4.0</span>
+                </div>
               </div>
             </div>
           </div>

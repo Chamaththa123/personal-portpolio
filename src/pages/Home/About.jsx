@@ -3,7 +3,7 @@ import devImg from '../../assets/image1.png'; // Update with your actual image p
 
 export const About = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col items-center bg-[#f9fafb] py-8">
+    <section className="w-full min-h-screen flex flex-col items-center py-8">
       <div className="w-full max-w-6xl flex flex-col md:flex-row items-center gap-12 mt-8">
         {/* Left: Image and Experience */}
         <div className="relative flex-shrink-0 flex justify-center items-center w-full md:w-1/2">

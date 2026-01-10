@@ -4,9 +4,10 @@ import netflixLogo from '../../assets/image.png';
 
 export const Experience = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col items-center bg-[#f7f7f8] py-8">
-      <span className="text-[#7c3aed] font-medium text-sm mt-8">My Professional Journey</span>
-      <h2 className="text-5xl font-extrabold text-gray-900 mb-12">Work Experience</h2>
+    <section className="w-full min-h-screen flex flex-col items-center  py-8">
+      <span className="text-[#7c3aed] font-medium text-[15px] mt-8">My Professional Journey</span>
+      <h2  className="text-[50px] text-gray-800 mb-4 "
+        style={{ fontWeight: "800" }}>Work Experience</h2>
       <div className="w-full max-w-5xl relative flex flex-col items-center">
         {/* Timeline vertical line */}
         <div className="absolute left-1/2 top-0 h-full w-1 bg-[#e9d5ff] -translate-x-1/2 z-0" />
@@ -39,7 +40,7 @@ export const Experience = () => {
               </div>
             </div>
             {/* Timeline dot */}
-            <div className="absolute left-full top-16 -ml-3 w-4 h-4 bg-white border-4 border-[#a78bfa] rounded-full z-20" />
+            <div className="absolute left-1 top-16 -ml-3 w-4 h-4 bg-white border-4 border-[#a78bfa] rounded-full z-20" />
           </div>
         </div>
 
@@ -71,7 +72,7 @@ export const Experience = () => {
               </div>
             </div>
             {/* Timeline dot */}
-            <div className="absolute right-full top-16 -mr-3 w-4 h-4 bg-white border-4 border-[#a78bfa] rounded-full z-20" />
+            <div className="absolute right-1 top-16 -mr-3 w-4 h-4 bg-white border-4 border-[#a78bfa] rounded-full z-20" />
           </div>
         </div>
       </div>
